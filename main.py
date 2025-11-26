@@ -5,6 +5,7 @@ import asyncio
 from aiogram.enums import DiceEmoji
 
 bot = Bot(token = "8326658640:AAHQP51BPk9oZBdlfNNqL60_iuO16TN4sgI")
+bot = Bot(token = "YOUR TOKEN")
 dp = Dispatcher()
 
 @dp.message(Command("start"))
