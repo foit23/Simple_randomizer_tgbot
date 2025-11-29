@@ -7,12 +7,7 @@ from aiogram import F
 import keyboard
 
 
-
-<<<<<<< HEAD
-bot = Bot(token = "8326658640:AAHQP51BPk9oZBdlfNNqL60_iuO16TN4sgI")
-=======
 bot = Bot(token = "YOUR TOKEN")
->>>>>>> 5401fc8857c1263df33ca8fac3804c5173f5c999
 dp = Dispatcher()
 
 @dp.message(Command("start"))
@@ -47,11 +42,6 @@ async def slot_em(callback: types.CallbackQuery):
 @dp.callback_query(F.data == "bowling")
 async def bow_em(callback: types.CallbackQuery):
     await callback.message.answer_dice(emoji = DiceEmoji.BOWLING)
-
-
-@dp.message(Command("Reroll"))
-async def reroll(message = types.Message):
-    await message.answer_dice(emoji = DiceEmoji.DICE)
 
 async def main():
     await dp.start_polling(bot)
